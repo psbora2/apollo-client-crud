@@ -9,14 +9,13 @@ import {ADDRESS_LIST_QUERY} from '../../queries';
 const reverse= (a) => {
     var temp = [];
     var len = a.length;
-    for (var i = (len - 1); i !== 0; i--) {
+    for (var i = (len - 1); i >=0 ; i--) {
         temp.push(a[i]);
     }
     return temp;
 }
 
 const AddressListDumb = ({ data: { addresses, loading, error }}) => {
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (<div > <AddAddress></AddAddress>
